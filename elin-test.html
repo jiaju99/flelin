@@ -7,7 +7,7 @@
 <meta content="telephone=no" name="format-detection" />
 <meta content="email=no" name="format-detection" />
 <meta name="msapplication-tap-highlight" content="no" />
-<title>text-overflow:ellipsis</title>
+<title>多行省略 小结 伪类css3</title>
 <style>
 html, body { margin: 0; padding: 0; font-family: sans-serif; }
 
@@ -16,30 +16,44 @@ html, body { margin: 0; padding: 0; font-family: sans-serif; }
 .cf{*zoom:1}
 
 
-
-
-
-
-
-
+.userinfo .ebox3{ margin-left:70px;}
+#elinTest{ padding:10px;}
+#elinTest .elin{ margin-bottom:20px;}
 
 
 
 /* elin core */
 .elin{overflow:hidden;}/*ebox*/
 .elin:before{float:left;width:1px;height:100%;content:'';}
-.e1{float:right;width:100%;margin-left:-1px;}/*cot*/
 .elin:after{float:right;position:relative;left:100%;margin-right:1px;}/*dot*/
+.e1{float:right;width:100%;margin-left:-1px;}/*cot*/
+
+/* 2 */
+.elin2{line-height:20px;}
+.emax.elin2{max-height:40px;}
+.ecut.elin2{height:40px;}
+
+/* 3 */
+.elin3{line-height:20px;}
+.emax.elin3{max-height:60px;}
+.ecut.elin3{height:60px;}
+
+/* 4 */
+.elin4{line-height:20px;}
+.emax.elin4{max-height:80px;}
+.ecut.elin4{height:80px;}
 
 
 
 
-/* edot1 */
-.edot1:after{width:50px;margin-left:-50px;height:20px;top:-20px;line-height:10px;
+/*elin decoration  */
+
+
+/* a */
+.eboxa{background:#fff;}
+.edota:after{width:50px;margin-left:-50px;height:20px;top:-20px;line-height:10px;
 content: "...";overflow:hidden;text-align:center;text-indent:13px;
-
-
-    background: -moz-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 100%); /* ff3.6+ */
+ background: -moz-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 100%); /* ff3.6+ */
     background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(40%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1))); /* safari4+,chrome */
     background: -webkit-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 100%); /* safari5.1+,chrome10+ */
     background: -o-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 100%); /* opera 11.10+ */
@@ -48,9 +62,9 @@ content: "...";overflow:hidden;text-align:center;text-indent:13px;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* ie6-9 */
 }
 
-/* edot2 */
-
-.edot2:after{width:50px;margin-left:-50px;height:20px;top:-20px;line-height:10px;
+/* b */
+.eboxb{color:#fff;background-color:#434343;}
+.edotb:after{width:50px;margin-left:-50px;height:20px;top:-20px;line-height:10px;
 content: "...";overflow:hidden;text-align:center;text-indent:13px;
 
 background: -moz-linear-gradient(180deg, rgba(67,67,67,1) 0%, rgba(67,67,67,1) 42%, rgba(67,67,67,0.99) 43%, rgba(67,67,67,0) 100%); /* ff3.6+ */
@@ -63,27 +77,14 @@ background: -moz-linear-gradient(180deg, rgba(67,67,67,1) 0%, rgba(67,67,67,1) 4
 }
 
 
-/* app1 */
-.ebox1{line-height:20px;}
-.emax.ebox1{max-height:80px;}
-.ecut.ebox1{height:80px;}
-
-/* app2 */
-.ebox2{line-height:20px;}
-.emax.ebox2{max-height:40px;}
-.ecut.ebox2{height:40px;}
-
-/*修饰部分*/
-.ebox1{background:#fff;}
-.ebox2{color:#fff;background-color:#434343;}
 
 
 
-.userinfo .ebox3{ margin-left:70px;}
 
-#elinTest{ padding:10px;}
 
-#elinTest .elin{ margin-bottom:20px;}
+
+
+
 
 </style>
 </head>
@@ -91,44 +92,49 @@ background: -moz-linear-gradient(180deg, rgba(67,67,67,1) 0%, rgba(67,67,67,1) 4
 <br />
 
 
-<div class="ebox1 elin edot1"><div class="e1">
+<div class="elin elin2 emax eboxa edota"><div class="e1">
 在总结成果
 <!--e1 --></div><!--ebox --></div>
 
+<i class="jskan">看看</i>
 
-
-<div class="ebox1 elin edot1"><div class="e1">
-这在总结成果总结成果这在总结成果这在总结成果这在text-overflow:ellipsistext-overflow:ellipsistext-overflow:ellipsis总结成果 text-overflow:ellipsis text-overflow:ellipsis text-overflow:ellipsis
-<!--e1 --></div><!--ebox --></div>
-
-<div class="ebox1 elin edot1"><div class="e1">
-这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果
-<!--e1 --></div><!--ebox --></div>
-
-
-
-<div class="ebox2 elin edot2"><div class="e1">
-在总结成果
-<!--e1 --></div><!--ebox --></div>
-
-
-
-<div class="ebox2 elin edot2"><div class="e1">
+<div class="elin elin3 emax eboxa edota"><div class="e1">
 这在总结成果总结成果这在总结成果这在总结成果这在总结成果
 <!--e1 --></div><!--ebox --></div>
 
-<div class="ebox2 elin edot2"><div class="e1">
+<i class="jskan">看看</i>
+
+
+<div class="elin elin4 emax eboxa edota"><div class="e1">
 这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果
 <!--e1 --></div><!--ebox --></div>
+
+<i class="jskan">看看</i>
+
+<p>=========================</p>
+
+<div class="elin elin2 emax eboxb edotb"><div class="e1">
+在总结成果
+<!--e1 --></div><!--ebox --></div>
+
+<i class="jskan">看看</i>
+
+<div class="elin elin3 emax eboxb edotb"><div class="e1">
+这在总结成果总结成果这在总结成果这在总结成果这在总结成果
+<!--e1 --></div><!--ebox --></div>
+
+<i class="jskan">看看</i>
+
+<div class="elin elin4 emax eboxb edotb"><div class="e1">
+这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果这在总结成果
+<!--e1 --></div><!--ebox --></div>
+
+<i class="jskan">看看</i>
 
 
 <script src="jq.js"></script>
 
-
-
-
 <script>
-
 function flelin(a,b,see) {
 see=!see?0:see;
 var as=$(a);
@@ -137,32 +143,21 @@ var c=$(el);c.addClass('emax');
 
 var chihi=function(){
 var c1=c.find('.e1'),chi=c1.height();//alert(chi);
-if(chi>b){c.addClass('eover').addClass('ecut').removeClass('emax');if(see){c.click(function(){c.toggleClass('ecut');});}}
+if(chi>b){c.addClass('eover ecut').removeClass('emax');
+if(see){c.click(function(){c.toggleClass('ecut');});}}
 };
+
 chihi();$(window).on('resize',chihi);
 
-c.on('keyup',function(){ console.log('hhh');});
-
-
+c.on('keyup',chihi);
+$('.jskan').eq(i).click(function(){c.toggleClass('ecut');});
 
 });
 }//0.5
 
-
-
-flelin('.ebox1',80,1);
-flelin('.ebox2',40,1);
-
-
-
-
-
-
-
-
-
-
-
+flelin('.elin2',40,1);
+flelin('.elin3',60,1);
+flelin('.elin4',80,1);
 </script>
 
 
